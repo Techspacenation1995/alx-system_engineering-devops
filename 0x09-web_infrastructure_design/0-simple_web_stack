@@ -1,0 +1,50 @@
+https://imgur.com/a/eAeg8Qn
+
+Specifics
+
+-What is a Server:
+A server is a machine or software that provides services or resources to other computers, known as clients, over a network.
+
+-Role of the Domain Name:
+A domain name (www.foobar.com) serves as a human-friendly label for the server's IP address, making it easier for users to access the website.
+
+-Type of DNS Record for www in www.foobar.com:
+The DNS record for www in www.foobar.com is a CNAME (Canonical Name) record, which points to the domain's canonical (official) name.
+
+-Role of the Web Server (Nginx):
+Nginx acts as the entry point for HTTP requests, forwarding them to the application server.
+Handles static content and can improve performance with features like caching and load balancing.
+
+-Role of the Application Server:
+Executes dynamic application code in response to user requests.
+Communicates with the web server to generate and serve dynamic content.
+
+-Role of the Database (MySQL):
+Stores and manages structured data for the website.
+Provides a structured way to retrieve, update, and manage the website's information.
+
+-Server Communication with User's Computer:
+The server communicates with the user's computer over the Internet using the HTTP or HTTPS protocols to exchange data and deliver the requested web pages.
+
+Issues with the Infrastructure:
+
+-Single Point of Failure (SPOF):
+The entire infrastructure relies on a single server. If it fails, the entire website becomes inaccessible.
+
+-Downtime during Maintenance:
+Deploying new code may require restarting the web server, causing downtime during the restart process.
+
+-Scaling Limitations:
+The infrastructure may struggle to handle increased traffic. Scaling is limited to the capabilities of a single server.
+
+
+Recommendations for Improvement:
+
+-High Availability:
+Introduce redundancy and failover mechanisms to eliminate the single point of failure. Consider load balancing.
+
+-Deployments without Downtime:
+Implement strategies like rolling deployments or blue-green deployments to update the application without causing downtime.
+
+-Horizontal Scaling:
+Explore options for horizontal scaling by adding more servers to distribute the load and accommodate increased traffic.
